@@ -208,7 +208,7 @@ my_function("Emil")
 
 # DEFINE -->The *args parameter allows a function to accept any number of positional arguments.
 
-# If you do not know how many arguments will be passed into your function, add a * before the parameter name.
+# If you do not know how many arguments will be passed into your function, add a ** before the parameter name.
 # This way, the function will receive a tuple of arguments and can access the items accordingly:
 
 # Accessing values from **kwargs:
@@ -366,3 +366,246 @@ def otherfunction():
 
 print(myfunction())
 print(otherfunction())
+
+# Functions with arguments can also be decorated:
+
+def changecase(func):
+  def myinner(x):
+    return func(x).upper()
+  return myinner
+
+@changecase
+def myfunction(nam):
+  return "Hello " + nam
+
+print(myfunction("John"))
+
+# One decorator for upper case, and one for adding a greeting:
+
+def changecase(func):
+  def myinner():
+    return func().upper()
+  return myinner
+
+def addgreeting(func):
+  def myinner():
+    return "Hello " + func() + " Have a good day!"
+  return myinner
+@changecase
+@addgreeting
+def myfunction():
+  return "Tobias"
+
+print(myfunction())
+
+
+
+
+# Lambda Functions: 
+# A lambda function can take any number of arguments, but can only have one expression.
+
+# Add 10 to argument a, and return the result:
+x = lambda a : a + 10
+print(x(5))
+
+# Multiply argument a with argument b and return the result:
+x = lambda a, b : a * b
+print(x(5, 6))
+
+# Summarize argument a, b, and c and return the result:
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+
+# We use lambda function
+# Say you have a function definition that takes one argument, and that argument will be multiplied with an unknown number:
+
+
+
+# Generators :--
+# Generators are functions that can pause and resume their execution.
+# When a generator function is called, it returns a generator object, which is an iterator.
+
+
+def my_generator():
+  yield 1
+  yield 2
+  yield 3
+
+for value in my_generator():
+  print(value)
+
+
+# The send() method allows you to send a value to the generator:
+def echo_generator():
+  while True:
+    received = yield
+    print("Received:", received)
+
+gen = echo_generator()
+next(gen) # Prime the generator
+gen.send("Hello")
+gen.send("World")
+
+
+  # The close() method stops the generator:
+def my_gen():
+  try:
+    yield 1
+    yield 2
+    yield 3
+  finally:
+    print("Generator closed")
+
+gen = my_gen()
+print(next(gen))
+gen.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # def sum_cal(a,b):
+# #   sum = a+b
+# #   print(sum)
+# #   return sum
+
+# # sum_cal(2,5)
+
+
+# # def addition(a,b):
+# #   return(a+b)
+
+# # sum= addition(10,57)
+# # print(sum)
+
+# def cal_avg(a,b,c):
+#     sum = a+b+c
+#     avg = sum / 3
+#     print(avg)
+
+# cal_avg(2,3,4)
+
+
+# def cal_avg(addition):
+#   return (addition)
+
+
+def even_odd(num):
+  if num % 2 == 0:
+    print("number is even:")
+  else:
+    print("number is odd")
+
+even_odd(5)

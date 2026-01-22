@@ -1,32 +1,32 @@
-# name = input("Enter your name: ")   
-# print("Welecome: ",name)
+name = input("Enter your name: ")   
+print("Welecome: ",name)
 
 
-# numbers = int(input("enter a phone number::"))
-# print(numbers,"number saved")
+numbers = int(input("enter a phone number::"))
+print(numbers,"number saved")
 
 
-# float = float(input("enter a float number"))
-# print(float,"number saved:",type(float))
-
-# a,b,c,d = input("enter a number:").split()
-
-# print("number 1st is :",a)
-# print("number 2nd is",b)
-# print("number 3rd is ",c)
-# print("number 4th is ",d , type(d))
+float = float(input("enter a float number"))
+print(float,"number saved:",type(float))
 
 
-# # If you want to print multiple words on the same line, you can use the end parameter:
-# print("Hello World!", end=" ")
-# print("I will print on the same line.")
+a,b,c,d = input("enter a number:").split()
+print("number 1st is :",a)
+print("number 2nd is",b)
+print("number 3rd is ",c)
+print("number 4th is ",d , type(d))
+
+
+# If you want to print multiple words on the same line, you can use the end parameter:
+print("Hello World!", end=" ")
+print("I will print on the same line.")
 
 
 
-# x, y, z = "Orange", "Banana", "Cherry"
-# print(x, end=" ")
-# print(y)
-# print(z)
+x, y, z = "Orange", "Banana", "Cherry"
+print(x, end=" ")
+print(y)
+print(z)
 
 # If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
 fruits = ["apple", "banana", "cherry"]
@@ -85,10 +85,11 @@ x = txt.casefold()
 print(x)
 
 
-# Return the number of times the value "apple" appears in the string:
+# count Return the number of times the value "apple" appears in the string:
 txt = "I love apples, apple are my favorite fruit"
 x = txt.count("apple")
 print(x)
+
 
 # F-strigs But we can combine strings and numbers by using f-strings or the format() method!
 age = 36
@@ -131,7 +132,7 @@ print((6 + 3) - (6 + 3))
 # Multiplication * has higher precedence than addition +, and therefore multiplications are evaluated before additions:
 print(100 + 5 * 3)
 
-
+# ----------------------------------------------------------------------------------------------------------------------------->
 
 # LIST
 
@@ -161,14 +162,15 @@ thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
 thislist[1:3] = ["blackcurrant", "watermelon"]
 print(thislist)
 
-# To add an item to the end of the list, use the append() method:
-thislist = ["apple", "banana", "cherry"]
-thislist.append("orange")
-print(thislist)
-
 # To insert a list item at a specified index, use the insert() method.
 thislist = ["apple", "banana", "cherry"]
 thislist.insert(1, "orange")
+print(thislist)
+
+
+# To add an item to the end of the list, use the append() method:
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
 print(thislist)
 
 # To append elements from another list to the current list, use the extend() method.
@@ -205,6 +207,18 @@ thislist.clear()
 print(thislist)
 
 
+# List objects have a sort() method that will sort the list alphanumerically, ascending, by default:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+# Sort the list descending:
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+
+# -------------------------------------------------------------------------------------------------------------------------------->
+
 # Loop Through the Index Numbers
 thislist = ["apple", "banana", "cherry"]
 for i in range(len(thislist)):
@@ -219,21 +233,12 @@ for x in fruits:
     newlist.append(x)
 print(newlist)
 
+
 #  
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 newlist = [x for x in fruits if "a" in x]
 print(newlist)
 
-
-# List objects have a sort() method that will sort the list alphanumerically, ascending, by default:
-thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
-thislist.sort()
-print(thislist)
-
-# Sort the list descending:
-thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
-thislist.sort(reverse = True)
-print(thislist)
 
 # Customize Sort Function
 # You can also customize your own function by using the keyword argument key = function.
@@ -260,6 +265,7 @@ for x in list2:
 print(list1)
 
 # TUPLE
+
 # To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
 thistuple = ("apple",)
 print(type(thistuple))
@@ -279,7 +285,6 @@ y.append("orange")
 thistuple = tuple(y)
 
 # Convert the tuple into a list, remove "apple", and convert it back into a tuple:
-
 thistuple = ("apple", "banana", "cherry")
 y = list(thistuple)
 y.remove("apple")
@@ -290,14 +295,13 @@ thistuple = tuple(y)
 thistuple = ("apple", "banana", "cherry")
 y = ("orange",)
 thistuple += y
-
 print(thistuple)
 
 
 
 
 # SET
-# True and 1 is considered the same value:
+# in set True and 1 is considered the same value:
 thisset = {"apple", "banana", "cherry", True, 1, 2}
 print(thisset)
 
@@ -432,12 +436,11 @@ car = {
 "model": "Mustang",
 "year": 1964
 }
+
 x = car.keys()
 print(x) #before the change
 car["color"] = "white"
 print(x) #after the change
-
-
 
 # Make a change in the original dictionary, and see that the values list gets updated as well:
 car = {
@@ -648,7 +651,7 @@ for x, obj in myfamily.items():
 # get()	      Returns the value of the specified key
 # items()	    Returns a list containing a tuple for each key value pair
 # keys()	Returns a list containing the dictionary's keys
-# pop()	Removes the element with the specified key
+# pop()	    Removes the element with the specified key
 # popitem()	Removes the last inserted key-value pair
 # setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
 # update()	Updates the dictionary with the specified key-value pairs
