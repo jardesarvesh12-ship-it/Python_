@@ -5,6 +5,6 @@ def even_odd(n):
     else:
         print("odd number: ")
 
-num = int(input("enter a number: "))
+n = int(input("enter a number: "))
 
 print(" number is : ",even_odd(n))
