@@ -16,12 +16,15 @@ print(thislist)
 # To append elements from another list to the current list, use the extend() method.
 thislist = ["apple", "banana", "cherry"]
 tropical = ["mango", "pineapple", "papaya"]
+
 thislist.extend(tropical)
 print(thislist)
 
 # The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
 thislist = ["apple", "banana", "cherry"]
 thistuple = ("kiwi", "orange")
+
+
 thislist.extend(thistuple)
 print(type(thislist)) # type list
 
@@ -44,6 +47,7 @@ print(thislist)
 
 # Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
 newlist = []
 for x in fruits:
     if "a" in x:
@@ -55,6 +59,7 @@ print(newlist)
 # Append list2 into list1:
 list1 = ["a", "b" , "c"]
 list2 = [1, 2, 3]
+
 for x in list2:
     list1.append(x)
 print(list1)
@@ -67,6 +72,7 @@ print(y, type(y))
 
 # Convert the tuple into a list, add "orange", and convert it back into a tuple:
 thistuple = ("apple", "banana", "cherry")
+
 a = list(thistuple)
 a.append("orange")
 thistuple=tuple(a)

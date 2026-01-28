@@ -1,10 +1,11 @@
-def max_num(a,b):
+
+def add(a,b):
     if a > b:
         return a
     else:
         return b
     
 num1 = int(input("enter a first number: "))
-num2 = int(input("enter a second number:"))
+num2 = int(input("enter a second number: "))
 
-print("max_num is : ",max_num(num1 , num2))
+print("greater number is ",add(num1, num2))
