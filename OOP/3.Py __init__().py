@@ -1,4 +1,4 @@
-# All classes have a built-in method called __init__(), When create new object __init__ method will execute
+# All classes have a built-in method called __init__(), When create a new object __init__ method will execute
 
 # The __init__() method is used to assign values to object properties, or to perform operations that are necessary when the object is being created.
 
@@ -15,8 +15,6 @@ p1 = Person("Emil", 36)
 
 print(p1.name)
 print(p1.age)
-
-
 
 
 #  We use __init__ because Without the __init__() method, you would need to set properties manually for each object:
@@ -168,3 +166,75 @@ p1.city = "Oslo"
 print(p1.name)
 print(p1.age)
 print(p1.city)
+
+
+
+# -----------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------
+# Class Methods
+
+# Methods are functions that belong to a class. 
+class person1():
+  def __init__(self, name):
+    self.name = name
+
+  def greet(self):
+    print("hi my name is :" , self.name)
+
+s1 = person1("sarvesh")
+s1.greet()
+
+
+
+# Methods can accept parameters just like regular functions
+
+class calculator:
+  def add(self, a,b):
+    return a+b
+  def multi(self,a,b):
+    return a*b
+  
+ass = calculator()
+print(ass.add(5,9))
+print(ass.multi(5,2))
+
+# A method that accesses object properties:
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def get_info(self):
+    return f"{self.name} is {self.age} years old"
+
+p1 = Person("Tobias", 28)
+print(p1.get_info())
+
+
+# A method that changes a property value:
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def celebrate_birthday(self):
+    self.age += 1
+    print(f"Happy birthday! You are now {self.age}")
+
+p1 = Person("Linus", 25)
+p1.celebrate_birthday()
+p1.celebrate_birthday()
+
+
+
+# The __str__() method is a special method that controls what is returned when the object is printed:
+
+
+
+# Static Methods 
+
+# method that don't usr self parameter
+class student:
+  @staticmethod
+  def collage():
+    print("ABC")
