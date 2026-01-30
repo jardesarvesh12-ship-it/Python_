@@ -4,12 +4,18 @@
 # Create a Class
 # To create a class, use the keyword class
 
-# 
-class MyClass:
-    x = 6
+# class is blueprint for creating objects
+class Cars:
+    names = "BMW"
+    color = "Red"
+    power = "horse_power"
 
-p1 = MyClass()
-print(p1.x)
+# Object
+s1 = Cars()
+print(s1.names)
+print(s1.color)
+
+
 
 # 
 class person:
@@ -19,8 +25,21 @@ class person:
     occupation = "Master in computer Applictions"
 s = person
 print(s.name)
+print(s.address)
 
 
 
 # You can delete objects by using the del keyword:
-del p1
+# del p1
+
+
+class Polition:
+    PM = "Narendr Modi"
+    EF = "jayshankar"
+    FM = "sudha nirmale"
+    CM = "davendre fadanvies"
+    xcm = "ajit powar"
+
+p = Polition()
+print(p.PM)
+print(p.CM)

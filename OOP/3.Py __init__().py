@@ -1,9 +1,11 @@
-# All classes have a built-in method called __init__(), which is always executed when the class is being initiated.
+# All classes have a built-in method called __init__(), When create new object __init__ method will execute
 
 # The __init__() method is used to assign values to object properties, or to perform operations that are necessary when the object is being created.
 
 # Create a class named Person, use the __init__() method to assign values for name and age:
 
+
+# When create new object __init_ method will execute
 class Person:
   def __init__(self, name, age):
     self.name = name
@@ -13,6 +15,8 @@ p1 = Person("Emil", 36)
 
 print(p1.name)
 print(p1.age)
+
+
 
 
 #  We use __init__ because Without the __init__() method, you would need to set properties manually for each object:
@@ -127,11 +131,13 @@ print(p1.name) # This works
 
 
 
-
-# Class Properties vs Object Properties :--
+# -------------------------------------------------------------------------------------------------------------------
+# Class attribut vs Object Attribut :--
 
 # Properties defined inside __init__() belong to each object (instance properties):
 # Properties defined outside methods belong to the class itself (class properties) and are shared by all objects:.
+
+# object attribut > class attribute
 
 class Person:
   species = "Human" # Class property
@@ -147,6 +153,7 @@ print(p2.name)
 print(p1.species)
 print(p2.species)
 
+# -----------------------------------------------------------------------------------------------------------------------
 
 # You can add new properties to existing objects:
 class Person:
