@@ -28,6 +28,7 @@ print(x, end=" ")
 print(y)
 print(z)
 
+
 # If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
 fruits = ["apple", "banana", "cherry"]
 x, y, z = fruits
@@ -477,10 +478,6 @@ x = car.items()
 print(x) #before the change
 car["year"] = 2020
 print(x) #after the change
-
-
-
-
 
 
 # Update the "year" of the car by using the update() method:

@@ -47,13 +47,6 @@ my_function()
 my_function()
 
 
-# Function names follow the same rules as variable names in Python:
-# -->
-# A function name must start with a letter or underscore
-# A function name can only contain letters, numbers, and underscores
-# Function names are case-sensitive (myFunction and myfunction are different)
-
-
 # Return Values
 # Functions can send data back to the code that called them using the return statement.
 def get_greeting():
@@ -69,6 +62,7 @@ print(message)
 # Information can be passed into functions as arguments.
 # Arguments are specified after the function name, inside the parentheses. 
 # You can add as many arguments as you want, just separate them with a comma
+
 def my_function(car_nm):
   print(car_nm + " car")
 
