@@ -185,9 +185,7 @@ s1 = person1("sarvesh")
 s1.greet()
 
 
-
-# Methods can accept parameters just like regular functions
-
+# Methods can accept parameters just like regular function
 class calculator:
   def add(self, a,b):
     return a+b
@@ -198,7 +196,10 @@ ass = calculator()
 print(ass.add(5,9))
 print(ass.multi(5,2))
 
-# A method that accesses object properties:
+
+
+# Methods can modify the properties of an object:
+
 class Person:
   def __init__(self, name, age):
     self.name = name
@@ -225,11 +226,10 @@ p1 = Person("Linus", 25)
 p1.celebrate_birthday()
 p1.celebrate_birthday()
 
-
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # The __str__() method is a special method that controls what is returned when the object is printed:
-
-
 
 # Static Methods 
 
