@@ -24,7 +24,6 @@ print(thislist)
 thislist = ["apple", "banana", "cherry"]
 thistuple = ("kiwi", "orange")
 
-
 thislist.extend(thistuple)
 print(type(thislist)) # type list
 
@@ -47,8 +46,8 @@ print(thislist)
 
 # Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
-
 newlist = []
+
 for x in fruits:
     if "a" in x:
         newlist.append(x)

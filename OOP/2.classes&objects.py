@@ -10,6 +10,7 @@ class Cars:
     color = "Red"
     power = "horse_power"
 
+
 # Object
 s1 = Cars()
 print(s1.names)
