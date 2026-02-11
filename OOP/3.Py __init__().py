@@ -1,8 +1,9 @@
 # All classes have a built-in method called __init__(), When create a new object __init__ method will execute
 
-# The __init__() method is used to assign values to object properties, or to perform operations that are necessary when the object is being created.
+# The __init__() (constructor) is a special method in class used to create and initialize object of a class 
 
 # Create a class named Person, use the __init__() method to assign values for name and age:
+
 
 
 # When create new object __init_ method will execute
